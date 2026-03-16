@@ -21,7 +21,7 @@ university project.
   users and content
 - Built dynamic search and filter functionality across all categories 
   using Fetch API and query parameters
-- Implemented favourites feature enabling users to save, view 
+- Implemented favourites feature, enabling users to save and view 
   and remove preferred listings
 - Built a booking management system — users can view past bookings, 
   make new bookings and edit existing ones
@@ -58,7 +58,9 @@ university project.
 6. Visit `http://localhost/[folder-name]` in your browser
 
 > ⚠️ Every time you run the project, ensure Apache and MySQL 
-> are running in XAMPP before starting the server. 
+> are running in XAMPP before starting the server.
+
+ 
 > ⚠️ In the terminal on VSCode, ensure you run `npm start` or `node server.js` to make
 > sure all the data is retrieved properly from the backend.
 
