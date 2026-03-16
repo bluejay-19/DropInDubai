@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stays</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src = "js/main.js" defer> </script>
+  <script src="js/hotels.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/favourites.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Drop In Dubai Logo">
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="hotels.html"class="active">Hotels</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+
+    <a href="login.html" class="profile-btn">
+      <img src="images/profileicon.png" alt="Profile">
+  </a>
+
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="hotels.html"class="active">Hotels</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+    <div class="hero hotelshero">
+        <h1>Your Perfect Stay Awaits in Dubai</h1>
+        <p>Luxury accommodations tailored to every traveler's dream.</p>
+    </div>
+
+<!-- Filter Section -->
+<section class="filter-section">
+    <h2>Tell us your travel dates and needs...</h2>
+    <form class="filter-form">
+      <label>
+        Search
+        <input type="text" id="search" placeholder="Hotel name">
+      </label>
+      <label>
+        Rating
+        <select id="rating">
+          <option value="">Any</option>
+          <option value="5★">5</option>
+          <option value="4★ & Up">4 & Up</option>
+          <option value="3★ & Up">3 & Up</option>
+        </select>
+      </label>
+      <label>
+        Room Type
+        <select id="roomType">
+          <option value="">Any</option>
+          <option value="Single">Single</option>
+          <option value="Double">Double</option>
+          <option value="Suite">Suite</option>
+        </select>
+      </label>
+      <label>
+        Max Price (AED)
+        <select id="priceRange">
+          <option value="">Any</option>
+          <option value="500">500 & under </option>
+          <option value="1000">500 - 1500</option>
+          <option value="1500">1500 - 3000 </option>
+          <option value="3000">3000 - 4500</option>
+          <option value="4000">4500 - 6000</option>
+          <option value="6000">6000 - 7000</option>
+        </select>
+      </label>
+      <label>
+        Adults
+        <input type="number" id="adults" min="1" value="1">
+      </label>
+      <label>
+        Children
+        <input type="number" id="children" min="0" value="0">
+      </label>
+      <button class="filter-btn" type="submit">Apply</button>
+    </form>
+  </section>
+
+  <!-- Hotels List -->
+  <section class="hotels-list">
+    <h2>Available Hotels</h2>
+    <div class="cards-grid">
+      <!-- cards will be injected here by hotels.js-->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Drop In Dubai | All rights reserved | Social media
+  </footer>
+
+</body>
+</html>
+
+
