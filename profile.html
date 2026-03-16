@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/main.js" defer></script>
+  <script src="js/profile.js" defer></script>
+  <script src="js/favourites.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</head>
+
+<body class="profile">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Drop In Dubai Logo">
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html" class="active">Profile</a>
+    </nav>
+
+    <a href="login.html" class="profile-btn">
+      <img src="images/profileicon.png" alt="Profile">
+  </a>
+  
+
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html" class="active">Profile</a>
+    </div>
+  </header>
+
+  <div class="profile-page">
+    <!-- Sidebar -->
+    <aside class="profile-sidebar">
+      <div class="user-info">
+        <img src="images/profile.jpg" alt="User image" class="avatar">
+        <h2 id="profile-username">Loading...</h2>
+        <p id="profile-email">Loading....</p>
+      </div>
+      <nav class="profile-nav">
+        <ul>
+          <li class="active" data-target="dashboard">Dashboard</li>
+          <li data-target="favorites">Favorites</li>
+          <li data-target="bookings">Bookings</li>
+          <li data-target="settings">Settings</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="profile-main">
+      <!-- Dashboard -->
+      <section class="section section-active" id="dashboard">
+        <h2 id="welcome-message">Welcome back!</h2>
+        <p>Here's a summary of your upcoming bookings.</p>
+        <div class="dashboard-bookings cards-grid">
+          <!-- JS will inject cards here -->
+        </div>
+      </section>
+
+      <!-- Favorites -->
+      <section class="section" id="favorites">
+        <h3>Your favorite Places</h3>
+        <div id="favorites-container" class="cards-grid">
+             <!-- JS will inject favourites here -->
+        </div>
+      </section>
+
+      <!-- Bookings -->
+      <section class="section" id="bookings">
+        <h3>Upcoming Bookings</h3>
+        <div class="booking-container cards-grid">
+           <!-- JS will inject bookings here -->
+        </div>
+      </section>
+
+      <!-- Settings -->
+    <section class="section" id="settings">
+      <h3>Account Settings</h3>
+      <form id="settings-form" class="settings-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <label for="password">Change Password (leave blank to keep current)</label>
+        <input type="password" id="password" placeholder="New password">
+        
+        <button type="submit">Save Changes</button>
+      </form>
+      
+        <div class="section-divider"></div>
+  
+      <div class="danger-zone">
+        <h4>Danger Zone</h4>
+        <p>Once you delete your account, there is no going back. Please be certain.</p>
+        <button class="delete-btn">Delete Account</button>
+      </div>
+      
+      <button class="logout-btn">Log Out</button>
+
+      <a href="admin.html" class="admin-dashboard-btn" id="adminDashboardBtn" style="display: none;">
+          Back to Admin Dashboard
+      </a>
+
+    </section>
+    </main>
+  </div>
+
+
+<!-- Booking Details Modal -->
+  <div id="bookingModal" class="profile-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+        <img id="modal-image" src="" alt="Booking Image" style="width:100%; max-height:200px; object-fit:cover; border-radius:8px;">
+        <h2 id="modal-title">Booking Title</h2>
+        <p id="modal-date">Date: </p>
+        <p id="modal-status">Status: </p>
+        <p id="modal-location">Location: </p>
+        <p id="modal-description">Description: </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Drop In Dubai | All rights reserved | Social media</p>
+  </footer>
+
+  </body>
+  </html>
+
