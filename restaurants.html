@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drop In Dubai</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/main.js" defer></script>
+  <script src="js/restaurants.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/favourites.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Drop In Dubai Logo">
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="restaurants.html"class="active">Restaurants</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+
+    <a href="login.html" class="profile-btn">
+      <img src="images/profileicon.png" alt="Profile">
+  </a>
+
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="restaurants.html"class="active">Restaurants</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero restaurantshero">
+    <h1>Dubai: A Culinary Journey</h1>
+    <p>Find your next obsession - from hidden street food gems to award-winning dining.</p>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filter-section">
+    <h2>What are you hungry for?</h2>
+    <form class="filter-form">
+      <label>
+        Search
+        <input type="text" id="search" placeholder="Restaurant name">
+      </label>
+
+      <label>
+        Cuisine
+        <select id="cuisine">
+          <option value="">All</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Peruvian">Peruvian</option>
+          <option value="Italian">Italian</option>
+          <option value="Indian">Indian</option>
+          <option value="Lebanese">Lebanese</option>
+          <option value="Seafood">Seafood</option>
+          <option value="Steakhouse">Steakhouse</option>
+        </select>
+      </label>
+
+      <label>
+        Rating
+        <select id="rating">
+          <option value="">All</option>
+          <option value="5★">5★</option>
+          <option value="4★ & Up">4★ & Up</option>
+          <option value="3★ & Up">3★ & Up</option>
+        </select>
+      </label>
+
+      <label>
+        Price Range
+        <select id="priceRange">
+          <option value="">Any</option>
+          <option value="1">Budget (Under AED 150)</option>
+          <option value="2">Mid-Range (AED 150-300)</option>
+          <option value="3">Upscale (AED 300+)</option>
+        </select>
+      </label>
+      <button class="filter-btn" type="submit">Apply Filters</button>
+    </form>
+  </section>
+
+  <!-- Restaurants List -->
+  <section class="restaurants-list section">
+    <h2>Restaurants</h2>
+    <div class="cards-grid">
+      <!-- cards will be injected here by restaurants.js -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy;  2025 Drop In Dubai | All rights reserved | Social media
+  </footer>
+  
+</body>
+</html>
+
+
+
