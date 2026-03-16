@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/admin.js"defer></script>
+</head>
+<body>
+  <header id="admin-header">
+    <img src="images/logo.jpg" alt="Logo">
+    <a href="profile.html">View as User</a>
+  </header>
+
+  <div class="admin-page">
+    <aside class="sidebar">
+      <ul>
+        <li class="active" data-section="dashboard">Dashboard</li>
+        <li data-section="bookings">Bookings</li>
+        <li data-section="hotels">Hotels</li>
+        <li data-section="restaurants">Restaurants</li>
+        <li data-section="attractions">Attractions</li>
+        <li data-section="events">Events</li>
+        <li data-section="settings">Settings</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="section active">
+        <h1>Admin Dashboard Overview</h1>
+        <div class="admincards">
+          <div class="admincard"><h3>Total Users</h3><p>4,520</p></div>
+          <div class="admincard"><h3>Total Listings</h3><p>1,240</p></div>
+          <div class="admincard"><h3>Total Bookings</h3><p>12,560</p></div>
+          <div class="admincard"><h3>Revenue</h3><p>AED 8,450,000</p></div>
+        </div>
+
+        <div class="charts">
+            <div class="chart-card">
+              <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-card">
+              <canvas id="lineChart"></canvas>
+            </div>
+          </div>
+      </section>
+
+      <!-- Bookings Section -->
+       <section id="bookings" class="section">
+        <h1>All User Bookings</h1>
+        <table id="bookingsTable">
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>User</th>
+              <th>Email</th>
+              <th>Item</th>
+              <th>Type</th>
+              <th>Check-In</th>
+              <th>Check-Out</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+       </section>
+
+      <!-- Hotels Section -->
+      <section id="hotels" class="section">
+          <h1>Hotels</h1>
+          <button class="add-btn" onclick="openAddModal('hotel')">Add Hotel</button>
+          <table id="hotelsTable">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Location</th>
+                      <th>Price</th>
+                      <th>Room Type</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+      </section>
+
+      <!-- Restaurants Section -->
+      <section id="restaurants" class="section">
+          <h1>Restaurants</h1>
+          <button class="add-btn" onclick="openAddModal('restaurant')">Add Restaurant</button>
+          <table id="restaurantsTable">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Cuisine</th>
+                      <th>Rating</th>
+                      <th>Location</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+      </section>
+
+      <!-- Attractions Section -->
+      <section id="attractions" class="section">
+          <h1>Attractions</h1>
+          <button class="add-btn" onclick="openAddModal('attraction')">Add Attraction</button>
+          <table id="attractionsTable">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Location</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+      </section>
+
+      <!-- Events Section -->
+      <section id="events" class="section">
+          <h1>Events</h1>
+          <button class="add-btn" onclick="openAddModal('event')">Add Event</button>
+          <table id="eventsTable">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Date</th>
+                      <th>Location</th>
+                      <th>Category</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+      </section>
+
+      <!-- Settings -->
+      <section id="settings" class="section">
+        <h1>Settings</h1>
+        <div class="settings-option">
+          <label for="adminPass">Change Admin Password:</label><br>
+          <input type="password" id="adminPass" placeholder="Enter new password">
+        </div>
+        <button class="save-settings" onclick="saveSettings()">Save Settings</button>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle">Add Listing</h3>
+      <form id="modalForm">
+        <input type="text" id="input1" placeholder="Name" required>
+        <input type="text" id="input2" placeholder="Detail 1" required>
+        <input type="text" id="input3" placeholder="Detail 2" required>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  
+
+ <footer>
+    &copy; 2025 Drop In Dubai. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
